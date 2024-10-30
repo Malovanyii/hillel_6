@@ -28,20 +28,39 @@
 // DeleteString(str, strRemove);
 
 // ДЗ 6.2. Визначення середнього арифметичного
-let arr = [20, false, undefined, '4', 50, 15, {}, '10', null, 5];
+// let arr = [20, false, undefined, '4', 50, 15, {}, '10', null, 5];
 
-function Average(arr) {
-    let sum = 0;
-    let count = 0;
+// function Average(arr) {
+//     let sum = 0;
+//     let count = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'number') {
-            sum += arr[i];
-            count++;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === 'number') {
+//             sum += arr[i];
+//             count++;
+//         }
+//     }
+
+//     return count === 0 ? 0 : sum / count;
+// }
+
+// console.log(Average(arr));
+
+// ДЗ 6.3. Функція видалення елементу
+const arr = [1, 4, 6, 9, 12, 120, 30, 43];
+
+function removeElement(arr, item) {
+    let changedArray = [];
+    let index = 0;
+
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] !== item) {
+            changedArray[index] = arr[j];
+            index++;
         }
     }
 
-    return count === 0 ? 0 : sum / count;
+    console.log(changedArray);
 }
 
-console.log(Average(arr));
+removeElement(arr, 12);
